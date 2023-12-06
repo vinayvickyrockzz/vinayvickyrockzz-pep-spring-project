@@ -106,7 +106,7 @@ public class SocialMediaController {
             return new ResponseEntity<>(HttpStatus.OK); // Message did not exist
         }
     } 
-    /*7: Our API should be able to update a message text identified by a message ID. */
+    /*7: Our API should be able to update a message text identified by a message ID.done */
     @PatchMapping("/messages/{message_id}")
     public ResponseEntity<Integer> updateMsgByMsgId(@PathVariable int message_id, @RequestBody Message replacement){
         if((!replacement.getMessage_text().isBlank()) && (replacement.getMessage_text().length()<=255)){
